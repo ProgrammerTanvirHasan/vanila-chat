@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messenger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <section class="flex justify-center p-6">
+      <div class="w-full max-w-3xl bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-2xl font-bold text-center mb-6 text-gray-800">
+          Messenger
+        </h1>
+
+        <div
+          id="form"
+          class="overflow-y-auto h-[60vh] border border-4 p-2"
+        ></div>
+        <!-- Textarea -->
+        <div>
+          <textarea
+            id="textarea"
+            placeholder="Write a message..."
+            class="w-full mt-4 p-3 border border-4 border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          ></textarea>
+          <div class="flex items-center justify-end mt-2">
+            <button
+              id="sendBtn"
+              class="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-semibold py-2 px-6 rounded-xl shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
