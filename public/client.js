@@ -45,9 +45,9 @@ function appendMessage(message, type) {
   }
 
   form.appendChild(mainDiv);
+  form.scrollTop = form.scrollHeight;
 }
 
 socket.on("message", (message) => {
   appendMessage(message, "incoming");
 });
-
